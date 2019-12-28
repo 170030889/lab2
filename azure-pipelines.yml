@@ -39,7 +39,7 @@ steps:
   displayName: 'Use Python $(python.version)'
 
 
-- script: python "sum.py"
+- script: python "fact.py"
 
 
 
