@@ -1,0 +1,69 @@
+<html>
+   <head>
+             <script>
+                   function ex1()
+                   {
+                           var s=document.getElementById("x");
+                            s.value=s.value.toUpperCase();
+                            var s1=document.getElementById("y");
+                            s1.value=s1.value.toUpperCase();
+                    }
+                    function ex2()
+                    {
+                              var z=parseInt(document.f.z.value);
+                               if(z<18)
+                                      window.alert("Error message age should be greater than 18");
+                    }
+
+                    function ex3()
+                    {
+                              if(document.f.v.value=="")
+                              {
+                                    document.getElementById('h').innerHTML="*Phone Number field should not be empty";
+                                    document.f.v.focus();
+                                    return false;
+                              }
+                              if(document.f.v.length()!=10)
+                              {
+                                    document.getElementById('h').innerHTML="*Phone Number should contain 10 digits";
+                                    document.f.v.focus();
+                                    return false;
+                              }
+                              if(document.f.q.value=="")
+                              {
+                                    document.getElementById('h').innerHTML="*Email field should not be empty";
+                                    document.f.q.focus();
+                                    return false;
+                              }
+                                 if(!document.f.u.checked)
+                                  {
+                                           document.getElementById('h').innerHTML="*You must agree to the terms first.";
+                                           document.f.u.focus();
+                                            return false;
+                                  }
+                                   
+                     }
+              </script>
+   </head>
+    <body>
+          <center>
+        <form name="f" onsubmit="return ex3()">
+         First Name:<input type="text" id="x" onchange="return ex1()"><br><br>
+         Last Name:<input type="text" id="y" onchange="return ex1()"><br><br>
+          Age:<input type="text" name="z" onchange="return ex2()"><br><br>
+          Phone number:<font color="red"><sup>*</sup></font><input type="text" name="v"><br><br>
+           Email:<font color="red"><sup>*</sup></font><input type="email" name="q"><br><br>
+           No.of tickets:<select name="r">
+                  <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                    <option value="5">5</option>
+                     </select><br><br>
+           I accept to all terms and conditions<input type="checkbox" name="u"><br><br>
+            <input type="submit" value="Submit" onclick="return ex4()">
+         </form>
+    <p id="h"></p>
+          </center>
+    </body>
+</html>
