@@ -4,4 +4,4 @@
     script: |
       javac ReverseString.java
       
- 
+      java ReverseString
