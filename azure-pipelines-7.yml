@@ -13,5 +13,6 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      java ReverseString.java
+      javac ReverseString.java
+      
       java ReverseString
